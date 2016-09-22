@@ -1,21 +1,17 @@
-# This sample Makefile allows you to make an OpenGL application
-#   whose source is exactly one .c or .cc file.
+# An example of a segmented makefile to create the moving dot program
+#
+# Andrew J. Pounds
+# Mercer University
+# Fall 2012
 #
 #
-# To use this Makefile, you type:
-#
-#        make xxxx
-#                  
-# where
-#       xxxx.c is the name of the file you wish to compile 
-#       
-# A binary named xxxx will be produced
 
 CC = gcc
 C++ = g++ 
-LIBDIRS = -L/usr/X11R6/lib
-INCDIRS = -I/usr/X11R6/include
-LDLIBS =  -lglut -lGL -lGLU -lXmu -lX11 -lm
+LIBDIRS = -L/usr/lib64
+INCDIRS = -I/usr/include
+#LDLIBS =  -lglut -lGL -lGLU -lXmu -lX11 -lm
+LDLIBS =  -lglut -lGL -lGLU -lX11 -lm
 
 INCLUDES   = includes.h
 HEADERS    = constants.h structs.h
